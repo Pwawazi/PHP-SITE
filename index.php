@@ -16,8 +16,9 @@ $config = require 'config.php';
 
 // require 'router.php';
 
+$database = $config['database'];
 
-$db = new Database($config['database'], 'philip', '231231ZI');
+$db = new Database($database, $database['dbuser'], $database['dbpassword']);
 
 $id = $_GET['id'];
 
